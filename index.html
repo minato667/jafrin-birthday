@@ -1,1 +1,99 @@
-# jafrin-birthday
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10121f">
+<title>For Jafrin — 20 November</title>
+<style>
+:root{--bg:#10121f;--ink:#f6f0e9;--muted:#b9b5c5;--rose:#dca9b5;--gold:#e8d9b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+#sky{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 18%,#29243b 0%,#171827 45%,#0c0e18 100%);overflow:hidden}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.45;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.08;transform:scale(.5)}}
+main,footer{position:relative;z-index:1}
+section{min-height:100svh;display:grid;place-items:center;padding:72px 20px}
+.wrap{width:min(720px,100%);text-align:center}
+.kicker{font:10px/1.7 system-ui,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(52px,13vw,104px);line-height:.92;font-weight:400;letter-spacing:-.055em;margin:28px 0}
+h1 em{display:block;color:var(--rose);font-weight:400}
+.lead{font:15px/1.9 system-ui,sans-serif;color:#d0cbd7;max-width:510px;margin:0 auto 30px}
+button{cursor:pointer}
+.btn{border:1px solid #ffffff3d;border-radius:999px;background:#ffffff0a;color:var(--ink);padding:14px 22px;font:11px system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:.2s}
+.btn:hover{background:#ffffff16;transform:translateY(-2px)}
+.tiny{font:11px/1.7 system-ui,sans-serif;color:#9e9aac;margin-top:22px}
+.panel{padding:clamp(26px,6vw,52px);border:1px solid #ffffff1c;background:#ffffff08;border-radius:26px;box-shadow:0 25px 80px #0002;backdrop-filter:blur(10px)}
+h2{font-size:clamp(32px,7vw,56px);font-weight:400;line-height:1.08;margin:18px 0}
+.panel p{font:14px/2 system-ui,sans-serif;color:#d0cbd7}
+.rule{width:55px;height:1px;background:var(--rose);margin:25px auto}
+.countdown{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:28px 0}
+.unit{border:1px solid #ffffff20;border-radius:13px;padding:13px 12px;min-width:72px;background:#ffffff06}
+.unit b{display:block;font-size:27px;font-weight:400;color:var(--gold)}
+.unit span{font:9px system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.envelope{height:108px;width:145px;position:relative;margin:28px auto;cursor:pointer;filter:drop-shadow(0 10px 20px #0005);outline:none}
+.envbody{position:absolute;inset:15px 0 0;background:#d5a0ae;border-radius:5px}
+.envflap{position:absolute;top:15px;left:0;border-left:72px solid transparent;border-right:73px solid transparent;border-top:58px solid #efc8d0;transform-origin:top;transition:.65s;z-index:2}
+.paper{position:absolute;left:13px;right:13px;top:24px;height:72px;background:#f7f0e8;color:#66505b;display:grid;place-items:center;font-size:25px;transition:.65s;z-index:1}
+.envelope.open .envflap{transform:rotateX(180deg);z-index:0}.envelope.open .paper{transform:translateY(-42px)}
+.letter{display:none;text-align:left;max-width:500px;margin:30px auto 0;font:14px/2 system-ui,sans-serif;color:#e7e1eb;animation:reveal .8s both}
+.letter.show{display:block}@keyframes reveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.letter .sign{font:italic 24px Georgia,serif;color:var(--rose);text-align:right;margin-top:26px}
+.endline{font-size:clamp(26px,6vw,43px);line-height:1.35;font-weight:400;color:var(--rose);margin:28px auto}
+footer{text-align:center;padding:24px 12px 35px;color:#8d899b;font:10px system-ui,sans-serif;letter-spacing:.14em}
+.particle{position:fixed;z-index:5;top:-30px;pointer-events:none;animation:fall 4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
+#magic{position:fixed;right:14px;top:14px;z-index:6;background:#ffffff0a;border:1px solid #ffffff26;border-radius:999px;padding:9px 12px;color:#d8d1df;font:10px system-ui,sans-serif}
+@media(max-width:420px){.unit{min-width:63px}.lead{font-size:14px}}
+</style></head>
+<body>
+<div id="sky"></div><button id="magic">✦ A SMALL SURPRISE</button>
+<main>
+<section id="start"><div class="wrap">
+<div class="kicker">A page for a day worth remembering</div>
+<h1>For <em>Jafrin.</em></h1>
+<p class="lead">Not every meaningful story stays the same.<br>But some chapters still deserve a kind wish.</p>
+<button class="btn" id="open">Take a look ↘</button>
+<div class="tiny">20 November · made quietly, with no expectations</div>
+</div></section>
+<section id="birthday"><div class="wrap panel">
+<div class="kicker">November 20 · Your day</div><h2>Another year.<br><em style="color:var(--rose)">A new chapter.</em></h2>
+<p>Time changes a lot. People grow, paths turn, and life rarely follows the story we once imagined.</p>
+<p>Still, a birthday is a good moment to wish someone well — simply because they were once an important part of your world.</p>
+<div class="rule"></div>
+<div class="countdown"><div class="unit"><b id="d">--</b><span>Days</span></div><div class="unit"><b id="h">--</b><span>Hours</span></div><div class="unit"><b id="m">--</b><span>Minutes</span></div><div class="unit"><b id="s">--</b><span>Seconds</span></div></div>
+<p id="countcopy">Until November 20 ✧</p><button class="btn" id="letterBtn">There's a note for you</button>
+</div></section>
+<section id="note"><div class="wrap panel">
+<div class="kicker">A letter, without an envelope stamp</div>
+<div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Open the letter"><div class="envbody"></div><div class="paper">✧</div><div class="envflap"></div></div>
+<h2 id="letterHead">A little note.</h2><p id="hint">Tap the envelope when you're ready.</p>
+<div class="letter" id="letter">
+Jafrin,<br><br>
+Happy Birthday. 🤍<br><br>
+I hope the year ahead is gentle with you. I hope it brings you people you can trust, moments that make you laugh without thinking, and the courage to become the person you want to be.<br><br>
+Life has a way of changing relationships and taking people down different roads. I won't pretend that every chapter stays easy or that everything always turns out how we expected. But I can still be grateful for the good memories that were real when they happened.<br><br>
+So today, there are no questions to answer and nothing you need to say back. Just a sincere wish that you find peace in the things you can't change, happiness in the things you can, and little reasons to look forward to tomorrow.<br><br>
+I hope this next chapter surprises you in the best ways. And I hope, somewhere in the middle of an ordinary day, you remember how much beauty there still is ahead of you.
+<div class="sign">Happy Birthday, Jafrin. ✦</div>
+<p style="text-align:right;font-size:11px;color:#a9a2b4;margin-top:15px">No expectations. Just a wish.</p>
+</div>
+</div></section>
+<section id="final"><div class="wrap">
+<div class="kicker">One last thing</div>
+<div class="endline">Some memories can stay kind<br>without asking the past to return.</div>
+<p class="lead">May 20 November bring you a little more light, a little more peace, and a year that feels truly yours.</p>
+<h2 style="color:var(--gold);font-size:clamp(30px,7vw,48px)">Happy Birthday, Jafrin. 🤍</h2>
+<button class="btn" id="wish">Send a little starlight ✧</button><div class="tiny" id="wishmsg"></div>
+</div></section>
+</main><footer>FOR JAFRIN · 20 NOVEMBER · WITH GOOD WISHES, AND NO EXPECTATIONS</footer>
+<script>
+const sky=document.getElementById('sky');for(let i=0;i<135;i++){let a=document.createElement('i');a.className='star';a.style.left=Math.random()*100+'%';a.style.top=Math.random()*100+'%';a.style.animationDelay=Math.random()*4+'s';a.style.opacity=.15+Math.random()*.55;sky.appendChild(a)}
+function sparkle(){let a=document.createElement('i');a.className='particle';a.textContent=['✧','✦','🤍','⋆','🌙'][Math.floor(Math.random()*5)];a.style.left=Math.random()*100+'vw';a.style.fontSize=(13+Math.random()*16)+'px';a.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(a);setTimeout(()=>a.remove(),4300)}
+function burst(n){for(let i=0;i<n;i++)sparkle()}
+document.getElementById('open').onclick=()=>document.getElementById('birthday').scrollIntoView({behavior:'smooth'});
+document.getElementById('letterBtn').onclick=()=>document.getElementById('note').scrollIntoView({behavior:'smooth'});
+const env=document.getElementById('envelope');function reveal(){env.classList.add('open');document.getElementById('letter').classList.add('show');document.getElementById('letterHead').textContent='For you, Jafrin.';document.getElementById('hint').textContent='A birthday wish, with no strings attached.';burst(18)}
+env.onclick=reveal;env.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reveal()}}
+function tick(){let now=new Date(),target=new Date(now.getFullYear(),10,20);if(now>=target)target=new Date(now.getFullYear()+1,10,20);let x=target-now;document.getElementById('d').textContent=Math.floor(x/86400000);document.getElementById('h').textContent=String(Math.floor(x%86400000/3600000)).padStart(2,'0');document.getElementById('m').textContent=String(Math.floor(x%3600000/60000)).padStart(2,'0');document.getElementById('s').textContent=String(Math.floor(x%60000/1000)).padStart(2,'0');document.getElementById('countcopy').textContent=target.getFullYear()===now.getFullYear()?'Counting down to your day ✧':'Your birthday this year has passed; the next one is on its way ✧'}
+tick();setInterval(tick,1000);document.getElementById('wish').onclick=()=>{document.getElementById('wishmsg').textContent='A little starlight, sent your way. ✨';burst(45)};document.getElementById('magic').onclick=()=>{burst(20);document.getElementById('magic').textContent='✦ JUST A LITTLE MAGIC';setTimeout(()=>document.getElementById('magic').textContent='✦ A SMALL SURPRISE',2200)};
+</script></body></html>
